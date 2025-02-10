@@ -5,7 +5,7 @@ using namespace std;
 struct node 
 {
     string label;
-    //char label[10];
+    
     int ch_count;
     struct node *child[10];
 } * root;
