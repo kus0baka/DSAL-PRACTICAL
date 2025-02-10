@@ -1,6 +1,3 @@
-/*
-Experiment 7 : Construct an expression tree from the given prefix and traverse it using post order traversal and then delete the entire tree.
-*/
 #include <iostream>
 #include <string.h>
 using namespace std;
@@ -87,7 +84,7 @@ void tree::display(node *root)
 }
 void tree::non_rec_postorder(node *top)
 {
-    stack1 s1, s2; /*stack s1 is being used for flag . A NULL data implies that the right subtree has not been visited */
+    stack1 s1, s2; 
     node *T = top;
     cout << "\n";
     s1.push(T);
@@ -110,10 +107,10 @@ void tree::del(node *node)
 {
     if (node == NULL)
         return;
-    /* first delete both subtrees */
+    
     del(node->left);
     del(node->right);
-    /* then delete the node */
+    
     cout <<endl<<"Deleting node : " << node->data<<endl;
     free(node);
 }
@@ -126,9 +123,8 @@ int main()
     cin >> expr;
     cout << expr;
     t.expression(expr);
-    //t.display(t.top);
-    //cout<<endl;
+  
     t.non_rec_postorder(t.top);
     t.del(t.top);
-    // t.display(t.top);
+    
 }
