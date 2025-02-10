@@ -2,7 +2,7 @@
 #include <string.h>
 using namespace std;
 
-struct node // Node Declaration
+struct node 
 {
     string label;
     //char label[10];
@@ -10,7 +10,7 @@ struct node // Node Declaration
     struct node *child[10];
 } * root;
 
-class GT // Class Declaration
+class GT 
 {
 public:
     void create_tree();
